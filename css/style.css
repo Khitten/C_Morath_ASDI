@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* CSS Document 
 Cassandra Morath
-	ASDI 1310
-    10/28/13 */
+	ASDI 1401
+    01/06/14 */
 
+header, section, footer, aside, nav, article, figure
+{
+display: block;
+} 

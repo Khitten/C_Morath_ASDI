@@ -2,50 +2,461 @@
 	ASDI 1401
     01/06/14
     HTMLDoc-->
+<html>
+
+<head>
+    <!-- meta content. -->
+    <meta charset="UTF-8" />
+    <meta name="description" content="A portfolio for groomers.">
+    <meta name="keywords" content="groomer, portfolio, grooming, dog">
+    <meta name="robots" content="index, follow">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, user-scalable="yes", initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
     
-<!doctype html>
-	<html lang="en">
-		<head>
-            <title>PetFolio</title>
-            <!-- meta content. -->
-            <meta charset="UTF-8" />
-            <meta name="description" content="">
-            <meta name="keywords" content="">
-            <meta name="robots" content="index, follow">
-            <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" >
-       		<!--links-->
-        	<link rel="stylesheet" type="text/css" href="css/style.css" />
-         </head>
-	<body>
-    <section id="clients">
-    	<header>
-        	<h1>Clients</h1>
-            <p>All Active clients</p>
-        </header>
-        <section>
-            <ul><!-- for client list -->
-            	<li>
-                	<div>
-                    	<h2><a href="#">Owner's Name</a></h2>
-                        <p>Dog's Name</p>
-                        <p>Grooming Information</p>
+     <link href="css/jquery.mobile-1.3.2.min.css" type="text/css" rel="stylesheet" />
+     <link rel="stylesheet" href="css/style.css" type="text/css"/>
+
+    <title>PetFolio</title>
+</head>
+
+<body>
+    <!--Header-->
+    <div data-role="page" id="home"  data-theme="a">
+       <div data-role="header" data-position="fixed" data-add-back-btn="true">
+      
+       </div>
+        <div data-role="content">
+        <!--CTA and Feature-->
+            <div id="Fluffy">
+                <a href="#" data-ajax="false">
+                    <img src="IMG/This.jpg" alt="IMG/This.jpg" width="100%" height="10%">
+                 </a>
+             </div>
+             <br />
+                    <h3>Browse By:</h3>
+                    <br />
+                    <br />
+                    <div data-role="controlgroup">
+                       
+                            <a href="#owners" data-role="button" data-icon="arrow-r" data-iconpos="right">Owner Name</a>
+                        
+                            <a href="#pets" data-role="button" data-icon="arrow-r" data-iconpos="right">Pet Picture</a>
+                        
+                            <a href="#breedInfo" data-role="button" data-icon="arrow-r" data-iconpos="right">Breeds</a>
+                       
+                            <a href="#calendar" data-role="button" data-icon="arrow-r" data-iconpos="right">Schedule</a>
+                        
+                            <a href="#groomingInfo" data-role="button" data-icon="arrow-r" data-iconpos="right">Style</a>
+                        
                     </div>
-                    <img src="#" alt="description" />
-                 </li>    
+               
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <div data-role="fieldcontain">
+             <div class="ui-grid-a">
+                <div class="ui-block-a">
+                <a href="#popupLogin" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">Sign in</a>
+                    <div data-role="popup" id="popupLogin" data-theme="a" class="ui-content">
+                        <form method="get" action="">
+                            <div>
+                                <h3>Please sign in</h3>
+                                <label for="un" class="ui-hidden-accessible">Username:</label>
+                                <input name="user" id="un" value="" placeholder="username" data-theme="a" type="text">
+                                <p>*Required</p>
+                                <label for="pw" class="ui-hidden-accessible">Password:</label>
+                                <input name="pass" id="pw" value="" placeholder="password" data-theme="a" type="password">
+                                <p>*Required. Password is case sensitive.</p>
+                                <button type="submit" data-theme="a" data-icon="check">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                 </div>
+                    <div class="ui-block-b">
+                    <a href="#popupRegister" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="gear" data-theme="a" data-transition="pop">Register</a>
+                    <div data-role="popup" id="popupRegister" data-theme="a" class="ui-content">
+                        <form>
+                            <div>
+                                <h3>Please Register</h3>
+                                <label for="fn1" class="ui-hidden-accessible">First Name:</label>
+                                <input name="user" id="fn1" value="" placeholder="First Name" data-theme="a" type="text">
+                                <label for="ln1" class="ui-hidden-accessible">Last Name:</label>
+                                <input name="user1" id="ln1" value="" placeholder="Last Name" data-theme="a" type="text">
+                                <label for="email" class="ui-hidden-accessible">Email:</label>
+                                <input name="em" id="em" value="" placeholder="Email" data-theme="a" type="text">
+                                <p>*Required. Example: JohnDoe@123.com</p>
+                                <label for="un" class="ui-hidden-accessible">Username:</label>
+                                <input name="user1" id="user1" value="" placeholder="Username" data-theme="a" type="text">
+                                <p>*Required.</p>
+                                <label for="pw" class="ui-hidden-accessible">Password:</label>
+                                <input name="pass1" id="pass1" value="" placeholder="Password" data-theme="a" type="password">
+                                <p>*Required. Password is case sensitive.</p>
+                                <button type="submit" data-theme="a" data-icon="check">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>		
+        </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#Home"class="ui-btn-active">Home</a></li>
+                    <li><a href="#companyInfo">About Us</a></li>
+                    <li><a href="#" data-ajax="false">Add a Pet</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    
+    <!--This is where the form results should go-->
+    <div data-role="page" id="addItem">			
+    
+        <div data-role="header">
+            <h1>Clients</h1>
+        </div>
+
+        <div data-role="content">
+        
+        
+       
+        </div>
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div>
+	</div>
+
+    <!--Company Info Page-->
+    <div data-role="page" id="companyInfo" data-add-back-btn="true" data-theme="a" data-content-theme="a">
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>About our Company</h1>
+        </div>
+        <div data-role="content">
+            <h4>Cassandra Morath</h4>
+            <p>ASDI</p>
+            <p>
+                <time>2013-08-17</time>
+            </p>
+            <li>
+                    <a href="https://github.com/Khitten/Morath_Cassandra_MIU.git">
+                        <img src="IMG/GIT.png" />
+                        <h3>GIT Repository</h3>
+                    </a>
+                </li>
+            
+                 <div data-role="footer" data-position="fixed" data-theme="ac">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#companyInfo" class="ui-btn-active">About Us</a></li>
+                    <li><a href="pageAddItemGold.html" data-ajax="false">Add a Pet</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    </div>
+    <!--Grooming Info Page-->
+    <div data-role="page" id="groomingInfo" data-add-back-btn="true" data-theme="a" data-content-theme="a">
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>General Grooming Info</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="collapsible-set">
+                <div data-role="collapsible" data-collapsed="true" data-theme="a">
+                    <h3>"Teddy" clip</h3>
+                    <p>information here
+                    </p>
+                </div>
+                <div data-role="collapsible" data-collapsed="true" data-theme="a">
+                    <h3>Shave down</h3>
+                    <p>information here
+                    </p>
+                </div>
+                <div data-role="collapsible" data-collapsed="true" data-theme="a">
+                    <h3>Poodle clip</h3>
+                    <p>information here
+                    </p>
+                </div>
+                <div data-role="collapsible" data-collapsed="true" data-theme="a">
+                    <h3>"Lion" clip</h3>
+                    <p>information here
+                    </p>
+                </div>
+            </div>
+        </div>
+         <div data-role="footer" data-position="fixed" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn-active">Home</a></li>
+                    <li><a href="#companyInfo">About Us</a></li>
+                    <li><a href="#" data-ajax="false">Add a Pet</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    <!--Breed Info Page-->
+    <div data-role="page" id="breedInfo" data-add-back-btn="true">
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>External links</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li>
+                    <a href="http://www.akc.org/breeds/complete_breed_list.cfm">
+                        <img src="IMG/AKC.jpg" />
+                        <h3>AKC Breeds</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.cfainc.org/Breeds.aspx">
+                        <img src="IMG/CFATN.jpg" />
+                        <h3>CFA Breeds</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://animal.discovery.com/tv-shows/dogs-101/videos/designer-dogs.htm">
+                        <img src="IMG/APTN.jpg" />
+                        <h3>AP "Designer" Breeds</h3>
+                    </a>
+                </li>
             </ul>
-    </section>
-    <footer>
-    	<nav>
-        	<ul>
-            	<li><a href="#" id="home">Home</a></li>
-                <li><a href="#" id="add">Add Pet</a></li>
-                <li><a href="#" id="view">About</a></li>
-            </ul>
-        </nav>
-    </footer>
-    </section>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        </div>
+         <div data-role="footer" data-position="fixed" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#companyInfo">About Us</a></li>
+                    <li><a href="pageAddItemGold.html" data-ajax="false">Add a Pet</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+
+    <!--Name page-->
+    <div data-role="page" id="owners" data-add-back-btn="true" data-theme="a" data-content-theme="a">
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>Name list</h1>
+        </div>
+        <div data-role="content">
+        <p>Please search by name:</p>
+        <form method="get" action="search">
+                <div data-role="fieldcontain">
+                    <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search" data-inset="true"
+                    id="search1">
+                        </ul>
+                        </div>
+        </form>
+        </div>
+         <div data-role="footer" data-position="fixed" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#companyInfo">About Us</a></li>
+                    <li><a href="pageAddItemGold.html" data-ajax="false">Add a Pet</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    
+    <!--Pet Name page-->
+    <div data-role="page" id="pets" data-add-back-btn="true" data-theme="a" data-content-theme="a">
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>Pets</h1>
+        </div>
+        <div data-role="content">
+        	<fieldset class="ui-grid-b">
+            <!--LINE 1-->
+				<div class="ui-block-a">
+                	<img alt="" src="IMG/Delilah.jpg" style="width: 100px; height: 100px" />
+				</div>
+
+                <div class="ui-block-b">
+                	<img alt="" src="IMG/2012-10-119521-39-5395118.jpg" style="width: 100px; height: 100px" />
+                </div>
+
+                <div class="ui-block-c">
+                	<img alt="" src="IMG/Fox.jpg" style="width: 100px; height: 100px" /><a href="#"></a>
+                </div>
+                <!--LINE 2-->
+
+                <div class="ui-block-a">
+                	<img alt="" src="images.jpg" style="width: 100px; height: 100px" />
+                </div>
+
+                <div class="ui-block-b">
+                	<img alt="" src="images.jpg" style="width: 100px; height: 100px" />
+                </div>
+
+                <div class="ui-block-c">
+					<img alt="" src="images.jpg" style="width: 100px; height: 100px" />
+                </div>
+                <!--LINE 3-->
+                <div class="ui-block-a">
+
+                    <img alt="" src="images.jpg" style="width: 100px; height: 100px" />
+
+                </div>
+
+                <div class="ui-block-b">
+
+                    <img alt="" src="images.jpg" style="width: 100px; height: 100px" />
+
+                </div>
+
+                <div class="ui-block-c">
+				<img alt="" src="images.jpg" style="width: 100px; height: 100px" />
+                </div>
+
+            </fieldset>
+            <div class="ui-grid-b">
+	<!-- Need to insert links for the thumbnal grid -->		
+    <!-- 1st row Changing this!!!!!!!!!
+     <div class="ui-block-a">
+     	<div class="ui-bar ui-bar-a" style="height:60px">
+         <img src="IMG/Delilah.jpg" /><a href="#"></a></div>Shave</div>
+     <div class="ui-block-b">
+     	<div class="ui-bar ui-bar-a" style="height:60px">
+         <img src="IMG/2012-10-119521-39-5395118.jpg" /><a href="#"></a></div>Color</div>
+     <div class="ui-block-c">
+     	<div class="ui-bar ui-bar-a" style="height:60px">
+         <img src="IMG/Fox.jpg" /><a href="#"></a></div>Aged Pets</div>
+     <div class="ui-block-a">
+     	<div class="ui-bar ui-bar-a" style="height:60px">
+         <img src="IMG/Hairless.jpg" /><a href="#"></a></div>Hairless</div>
+     <div class="ui-block-b">
+     	<div class="ui-bar ui-bar-a" style="height:60px">
+         <img src="IMG/Mohawk.jpg" /><a href="#"></a></div>Mohawk</div>
+    <div class="ui-block-c">
+     	<div class="ui-bar ui-bar-a" style="height:60px">
+         <img src="IMG/Puppy.jpg" /><a href="#"></a></div>Puppies!</div>
+     <div class="ui-block-a">
+     	<div class="ui-bar ui-bar-a" style="height:60px">
+         <img src="IMG/Teddy.jpg" /><a href="#"></a></div>Combs</div>
+     <div class="ui-block-b">
+     	<div class="ui-bar ui-bar-a" style="height:60px">
+         <img src="IMG/PuppyClip.jpg" /><a href="#"></a></div>Blades</div>
+     <div class="ui-block-c">
+     	<div class="ui-bar ui-bar-a" style="height:60px">
+         <img src="IMG/TeddyHead.jpg" /><a href="#"></a></div>Faces</div><!-- /grid-c -->
+ </div>
+         </div>
+         <div data-role="footer" data-position="fixed" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#companyInfo">About Us</a></li>
+                    <li><a href="pageAddItemGold.html" data-ajax="false">Add a Pet</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    <!--Breed Page-->
+    <div data-role="page" id="breeds" data-add-back-btn="true" data-theme="a" data-content-theme="a">
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>Breeds</h1>
+            <b>Browse by Breed</b>
+        </div>
+        <div data-role="content" data-theme="a" data-content-theme="a">
+
+        </div>
+         <div data-role="footer" data-position="fixed" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#companyInfo">About Us</a></li>
+                    <li><a href="pageAddItemGold.html" data-ajax="false">Add a Pet</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    <!--Calendar-->
+    <div data-role="page" id="calendar" data-add-back-btn="true" data-theme="a" data-content-theme="a">
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>Schedule/Calendar</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="page" id="pageone">
+  </div>
+    <h2>My Calendar</h2>
+    <ul data-role="listview" data-inset="true">
+      <li data-role="list-divider">Friday, October 11, 2013 <span class="ui-li-count">2</span></li>   
+      <li><a href="#">   
+        <h2>Delilah</h2>
+        <h3>Shih Tzu</h3>
+       <b>Typical haircut</b>
+        <p>#7 A/O Trim Tail</p>
+        <p>Muzzle for nails</p>
+        <p>Mom likes her to have a bandanna</p>
+        <p class="ui-li-aside">Re: Appointment</p></a>
+      </li>
+      <li><a href="#">
+        <h2>Luigi</h2>
+        <p>Good boy!</p>
+        <p> Bath and nails!</p>
+        <br>
+        
+        <p class="ui-li-aside">Re: Appointment</p></a>
+      </li>
+      <li data-role="list-divider">Tuesday, October 1, 2013 <span class="ui-li-count">1</span></li>   
+      <li><a href="#">   
+        <h2>Louis</h2>
+        <p><b>Golden</b></p>
+        <p>New client</p>
+        <p class="ui-li-aside">Re: Initial meeting</p></a>
+      </li>
+      <li data-role="list-divider">Tuesday, September 1, 2013 <span class="ui-li-count">1</span></li>   
+      <li><a href="#">   
+        <h2>Abby</h2>
+        <p><b>Shetland Sheepdog</b></p>
+        <p>New client</p>
+        <p class="ui-li-aside">Re: Initial meeting</p></a>
+        </li>
+      <li><a href="#">
+        <h2>Chester</h2>
+        <b>Cat</b>
+        <p>Good boy!</p>
+        <p> Bath and nails!</p>
+        <br></a>
+      </li>
+    </ul>
+  </div>
+         <div data-role="footer" data-position="fixed" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#companyInfo">About Us</a></li>
+                    <li><a href="pageAddItemGold.html" data-ajax="false">Add a Pet</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+<div data-role="page" id="style" data-add-back-btn="true" data-theme="a" data-content-theme="a">
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <h1>Owners</h1>
+        </div>
+        <div data-role="content">
+            <p>There will be a link to styles here
+            </p>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#companyInfo">About Us</a></li>
+                    <li><a href="#" data-ajax="false">Add a Pet</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div> 
+  	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-    <script src="JS/main.js"></script>
-	</body>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script src="JS/main.js"></script>   
+</body>
 </html>

@@ -6,5 +6,10 @@ Cassandra Morath
 
 header, section, footer, aside, nav, article, figure
 {
-display: block;
+	display: block;
 } 
+
+img
+{
+	height: 130%;
+}

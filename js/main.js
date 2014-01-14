@@ -6,17 +6,10 @@
 
 $('#home').on('pageinit', function(){
 
-
- 	$('#home').on('pageinit', function () {
-    $('div[class^=ui-grid]').children ().each (function () {
-    $(this).html ('<div class="ui-bar ui-bar-b" style="height:60px">' + $(this).html () + '</div>');
-  		});
-	});
-});	
-		
+});		
 $('#addItem').on('pageinit', function(){
 	//click events for display, save and clear
-		var diplayLink = $('#display');
+		var displayLink = $('#popupDisplay');
 		displayLink.on('click', getData);
 		var save = $('#save');
 		save.on('click', validate);
@@ -24,7 +17,7 @@ $('#addItem').on('pageinit', function(){
 		clear.on('click', clearLocal);
 		
 	//form validate
-		var myForm = $('#formId');
+	/*	var myForm = $('#formId');
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
 			},
@@ -32,7 +25,7 @@ $('#addItem').on('pageinit', function(){
 		var data = myForm.serializeArray();
 			storeData(data);
 		}
-	});
+	}); */
 	
 	//any other code needed for addItem page goes here
 	
@@ -59,3 +52,8 @@ var	deleteItem = function (){
 var clearLocal = function(){
 
 };
+
+var validate = function(){
+
+};
+	

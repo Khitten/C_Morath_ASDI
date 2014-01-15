@@ -16,6 +16,15 @@ $('#addItem').on('pageinit', function(){
 		var clear = $('#clear');
 		clear.on('click', clearLocal);
 		
+	function getSelectedRadio(){
+		var radios = document.forms[0].sex;
+		for(var i=0; i<radios.length; i++){
+			if(radios[i].checked){
+				sexValue = radios[i].value;
+			}
+		}
+	}
+		
 	//form validate
 	/*	var myForm = $('#formId');
 		    myForm.validate({

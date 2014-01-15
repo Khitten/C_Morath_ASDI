@@ -138,23 +138,199 @@ header, section, footer, aside, nav, article, figure
     </div>
     
     <!--This is where the form results should go-->
-    <div data-role="page" id="addItem">			
-    
-        <div data-role="header">
-            <h1>Clients</h1>
-        </div>
+    <div data-role="page" id="addItem" data-add-back-btn="true" data-theme="a" data-content-theme="a">
+		<div data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
+			<h2>Add Your Pet</h2>
+		</div><!-- /header -->
 
-        <div data-role="content">
-      <a href="#popupAddItem" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="gear" data-theme="a" data-transition="pop">Add Pet</a>
-      <div data-role="popup" id="popupAddItem" data-theme="a" class="ui-content"></div>
-      <a href="#popupDisplay" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="gear" data-theme="a" data-transition="pop">Display</a>
-      <div data-role="popup" id="popupDisplay" data-theme="a" class="ui-content">
+	<div data-role="content"><!--Form-->
+    	<b>Submit or clear all fields</b>
+        <nav>
+           <a href = "#" id="clear">Clear Stored Data </br></a>
+           <a href = "#displayPage" id="display">Show Data </a>
+           <a href = "#" id="addNew"> Add New Item</a>
+        </nav>
+    <ul id="errors"></ul>
+    <span>* fields are required.</span>
+    <form action="#"method="post" id="clientInformation">
+         <fieldset id="ownerFieldSet">   
+             <div data-role="fieldcontain">
+           			 <h2>Owner's Info</h2><!--Text Area-->
+            	<ul id="ownerInformation">
+                <label for="fn2" class="ui-hidden-accessible">First Name:</label>
+                                <input name="user" id="fn2" value="" placeholder="First Name" data-theme="a" type="text">
+                                <label for="ln2" class="ui-hidden-accessible">Last Name:</label>
+                                <input name="user" id="ln2" value="" placeholder="Last Name" data-theme="a" type="text">
+                                <label for="email2" class="ui-hidden-accessible">Email:</label>
+                                <input name="em" id="em2" value="" placeholder="Email Example: JohnDoe@123.com" data-theme="a" type="text">
+                                <label for="pNumber" class="ui-hidden-accessible">Phone Number:</label>
+                                <input name="number" id="phone" value="" placeholder="Phone Number Example: 123-456-7890" data-theme="a" type="number">
+                                <label for="onotes"></label>
+                    			<textarea name="onotes" id="onotes" placeholder="Notes: Example: Owner always likes bows." data-theme="a" type="text"></textarea>
+                    				
+                  </ul>              
+              </div>      
+            </fieldset>		
+          </form>  	
+           
+   
+     
+     <form action="#"method="post" id="petInformation">
+         <fieldset id="petFieldSet">   
+             <div data-role="fieldcontain">
+           			 <h2>Pet's Info</h2><!--Text Area-->
+            	<ul id="petInformation">
+                    <label for="pname" class="ui-hidden-accessible">* Pet's Name:</label>
+                    <input name="pname" id="pname" placeholder="*Pet's Name: " data-theme="a" type="text"/>
+                    
+                    <label for="pnotes"></label>
+                    <textarea name="pnotes" id="pnotes" placeholder="Notes: " data-theme="a" type="text"></textarea>
+                    <p>Example: Luigi loves a bath!</p>
+            	</ul>
+           </div>
+         </fieldset>
+     </form>
+     <form>
+     <fieldset>
+                <label for="breed">What is the pet's breed?</label>
+                 	<select id="breed">
+                         <optgroup label="Dogs">
+                         <option value="small">small</option>
+                         <option value="medium">medium</option>
+                         <option value="large">large</option>
+                         </optgroup>
+                         <optgroup label="Cats">
+                         <option value="Domestic Short Hair">domestic short-haired</option>
+                         <option value="Domestic Long Hair">domestic long-haired</option>
+                         </optgroup>
+                      </select>
+                 
+                  </fieldset>
+      </form>       
+     <!--Radio Button-->
+    
+     <form>
+        <fieldset data-role="controlgroup">
+            <div>
+                <p>What is the pet's sex?</p><br />
+                <input name="radio-choice-v-2" id="male" value="off" checked="checked" type="radio">
+                <label for="radio-choice-v-2a">Male</label>
+                <input name="radio-choice-v-2" id="female" value="off" type="radio">
+                <label for="radio-choice-v-2b">Female</label>
+                <input name="radio-choice-v-2" id="neutered" value="other" type="radio">
+                <label for="radio-choice-v-2c">Neutered</label>
+                <input name="radio-choice-v-2" id="spayed" value="other" type="radio">
+                <label for="radio-choice-v-2d">Spayed</label>
+                <input name="radio-choice-v-2" id="unknown" value="on" type="radio">
+                <label for="radio-choice-v-2e">Unknown</label>
+            </div>
+        </fieldset>
+    </form>
+            <h2>Grooming Info</h2>
+    <div data-role="fieldcontain">
+   
+    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="gdate">
+       <p>What was the groom date?</p>
+    
+        <label for="select-choice-month">Month</label>
+        <select name="select-choice-month" id="select-choice-month">
+            <option>Month</option>
+            <option value="jan">January</option>
+            <option value="feb">February</option>
+            <option value="mar">March</option>
+            <option value="apr">April</option>
+            <option value="may">May</option>
+            <option value="jun">June</option>
+            <option value="jul">July</option>
+            <option value="aug">August</option>
+            <option value="sep">September</option>
+            <option value="oct">October</option>
+            <option value="nov">November</option>
+            <option value="dec">December</option>
+        </select>
+    
+        <label for="select-choice-day">Day</label>
+        <select name="select-choice-day" id="select-choice-day">
+            <option>Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>
+    
+        <label for="select-choice-year">Year</label>
+        <select name="select-choice-year" id="select-choice-year">
+            <option>Year</option>
+            <option value="2011">2007</option>
+            <option value="2011">2008</option>
+            <option value="2011">2009</option>
+            <option value="2011">2010</option>
+            <option value="2011">2011</option>
+            <option value="2011">2012</option>
+            <option value="2011">2013</option>
+            <option value="2011">2014</option>
+            <option value="2011">2015</option>
+            <option value="2011">2016</option>
+            <option value="2011">2017</option>
+        </select>
+        
+    </fieldset>
+</div>
+	<fieldset>
+        <h4>Difficulty</h4><!--Range -->
+        <p>On a scale from 1 to 10, how difficult was the groom? 5 being average.</p>
+            <input type="range" name="slider" min="1" max="10" value="5" id="slider">
+                <input type="hidden" value="true" />
+        	
+            <label for="pnotes"></label>
+                <textarea name="pnotes" id="pnotes" placeholder="Notes: Example: Oatmeal bath, extra brushing" data-theme="a" type="text"></textarea>
+                    
+            </fieldset>
+        <div>
+        <form>
+            <input type="submit" value="Submit" id="store" /><br />
+        </form>
         </div>
-		</div>
-        <div data-role="footer">
-            <h4>Page Footer</h4>
-        </div>
-	</div>
+		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-theme="a">
+		<div data-role="navbar">
+                <ul>
+                    <li><a href="Home">Home</a></li>
+                    <li> <a href="#companyInfo">About Us</a></li>
+                    <li><a href="#">Clear Fields</a></li>
+                </ul>
+            </div>
+	</div><!-- /footer -->
+</div><!-- /page -->	
     <!--Company Info Page-->
     <div data-role="page" id="companyInfo" data-add-back-btn="true" data-theme="a" data-content-theme="a">
         <div data-role="header" data-position="fixed" data-theme="a">

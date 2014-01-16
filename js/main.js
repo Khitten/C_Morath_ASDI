@@ -16,23 +16,19 @@ $('#addItem').on('pageinit', function(){
 		var clear = $('#clear');
 		clear.on('click', clearLocal);
 		
-		}
-	}
-		
-	//form validate
-	/*	var myForm = $('#formId');
-		    myForm.validate({
-			invalidHandler: function(form, validator) {
-			},
-			submitHandler: function() {
-		var data = myForm.serializeArray();
-			storeData(data);
-		}
-	}); */
+		$("#petForm").submit(function(event){
+			
+			if ($("#phone").val().length ===0){
+				alert("Here!");
+				return false;
+			}
+			else{alert($("#phone").val());}
+		});
+});	
 	
 	//any other code needed for addItem page goes here
 	
-});
+
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
@@ -59,4 +55,15 @@ var clearLocal = function(){
 var validate = function(){
 
 };
+
+//form validate
+	/*	var myForm = $('#formId');
+		    myForm.validate({
+			invalidHandler: function(form, validator) {
+			},
+			submitHandler: function() {
+		var data = myForm.serializeArray();
+			storeData(data);
+		}
+	}); */
 	

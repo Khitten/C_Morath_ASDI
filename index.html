@@ -6,223 +6,249 @@ HTMLDoc-->
   
   <head>
     <!-- meta content. -->
-  <meta charset="UTF-8" />
-  <meta name="description" content="A portfolio for groomers.">
-  <meta name="keywords" content="groomer, portfolio, grooming, dog">
-  <meta name="robots" content="index, follow">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, user-scalable="yes", initial-scale=1.0">
-  <meta http-equiv="cleartype" content="on">
-  
-  <link href="css/jquery.mobile-1.3.2.min.css" type="text/css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" type="text/css"/>
-  
-  <title>
-    PetFolio
-  </title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="A portfolio for groomers.">
+    <meta name="keywords" content="groomer, portfolio, grooming, dog">
+    <meta name="robots" content="index, follow">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, user-scalable="yes", initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    
+    <link href="css/jquery.mobile-1.3.2.min.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    
+    <title>
+      PetFolio
+    </title>
   </head>
   
   <body>
     <!--Header-->
-  <div data-role="page" id="home"  data-theme="a">
-    <div data-role="header" data-position="fixed" data-add-back-btn="true">
-    </div>
+    <div data-role="page" id="home"  data-theme="a">
+      <div data-role="header" data-position="fixed" data-add-back-btn="true">
+      </div>
       <div data-role="content">
         <!--CTA and Feature-->
-          <div id="Fluffy">
-         	<a href="#" data-ajax="false">
-              <img src="IMG/This.jpg" alt="IMG/This.jpg" width="100%" height="30%">
-           </a>
-          </div>
-          <h3>
-            Browse By:
-          </h3>
-          
-          <div data-role="controlgroup">
-            
-            <a href="#owners" data-role="button" data-icon="arrow-r" data-iconpos="right">
-              Owner Name
-            </a>
-            
-            <a href="#pets" data-role="button" data-icon="arrow-r" data-iconpos="right">
-              Pet Picture
-            </a>
-            
-            <a href="#breedInfo" data-role="button" data-icon="arrow-r" data-iconpos="right">
-              Breeds
-            </a>
-            
-            <a href="#calendar" data-role="button" data-icon="arrow-r" data-iconpos="right">
-              Schedule
-            </a>
-            
-            <a href="#groomingInfo" data-role="button" data-icon="arrow-r" data-iconpos="right">
-              Style
-            </a>
-            
-          </div>
-          
-          
-            <div class="ui-grid-a">
-              <div class="ui-block-a">
-                <a href="#popupLogin" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">
-                  Sign in
-                  </a>
-                  <div data-role="popup" id="popupLogin" data-theme="a" class="ui-content">
-                    <form method="get" action="">
-                      <div>
-                        <h3>
-                          Please sign in
-                        </h3>
-                        <label for="email">Email:</label>
-   						<input id="email" name="email" type="email" title="Please enter your email address" placeholder="JaneSmith@email.com" required />
-    
-                        <label for="password">Password:</label>
-    					<input id="password" name="password" type="password" title="Please enter a password, it must contain at least 1 lowercase and 1 uppercase character and be at least 6 characters in length" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" placeholder="******" required />
-    
-                        <button type="submit" data-theme="a" data-icon="check">
-                          Sign in
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-               </div>
-               <div class="ui-block-b">
-                 <a href="#popupRegister" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="gear" data-theme="a" data-transition="pop">
-                   Register
-                 </a>
-                 <div data-role="popup" id="popupRegister" data-theme="a" class="ui-content">
-                  <form name="signup-form">
-    <label for="firstname">Firstname:</label>
-    <input id="firstname" name="firstname" type="text" title="Please enter your firstname" placeholder="John" autofocus required />
-    
-    <label for="surname">Surname:</label>
-    <input id="surname" name="surname" type="text" title="Please enter your surname" placeholder="Smith" required />
-    
-    <label for="email">Email:</label>
-    <input id="email" name="email" type="email" title="Please enter your email address" placeholder="JohnSmith@email.com" required />
-    
-    <label for="website">Website:</label>
-    <input id="website" name="website" type="url" title="Please enter the url to your website (optional)" placeholder="http://schnittger.me" />
-    
-    <label for="password">Password:</label>
-    <input id="password" name="password" type="password" title="Please enter a password, it must contain at least 1 lowercase and 1 uppercase character and be at least 6 characters in length" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" placeholder="******" required />
-    
-    <label for="checkbox">Remember me?:</label>
-    <input id="checkbox" name="checkbox" type="checkbox" checked />
-    <!--Don't need this here just using as an example-->
-    <label for="checkbox">Are you a...?:</label>
-    <select id="options" name="options">
-        <option value="opt-1">Groomer</option>
-        <option value="opt-2">Owner</option>
-        <option value="opt-3">Just Browsing</option>
-        <option value="opt-4">Troll</option>
-    </select>
-    
-    
-    <input type="submit" value="Signup!" />
-
-</form>
-        
-           
-          </div>
-      </div>
-      </div>
-      </div>
-      <div data-role="footer" data-position="fixed" data-theme="b">
-        <div data-role="navbar">
-          <ul>
-            <li>
-              <a href="#home"class="ui-btn-active">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#companyInfo">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#addItem">
-                Add a Pet
-              </a>
-            </li>
-          </ul>
+        <div id="Fluffy">
+          <a href="#" data-ajax="false">
+            <img src="IMG/This.jpg" alt="IMG/This.jpg" width="100%" height="30%">
+          </a>
         </div>
-        <!-- /navbar -->
-      </div>
-      <!-- /footer -->
-  </div>
-  
-  <!--This is where the form results should go-->
-  <div data-role="page" id="addItem" data-add-back-btn="true" data-theme="a" data-content-theme="a">
-    <div data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
-      <h2>
-        Add Your Pet
-      </h2>
-    </div>
-    <!-- /header -->
-    
-	<div data-role="content">
-      <!--Form-->
-      <b>
-        Submit or clear all fields
-      </b>
-      <nav>
-        <a href = "#" id="clear">
-          Clear Stored Data 
-        </br>
-      </a>
-      <a href = "#displayPage" id="display">
-        Show Data 
-      </a>
-      <br>
-      <a href = "#" id="addNew">
-        Add New Item
-      </a>
-      </nav>
-      <ul id="errors">
-      </ul>
-      <span>
-        * fields are required.
-      </span>
-      <form action="#"method="post" id="petForm">
-        <fieldset id="ownerFieldSet">
+        <h3>
+          Browse By:
+        </h3>
+        
+        <div data-role="controlgroup">
           
-          <div data-role="fieldcontain">
-            <h2>
-              Owner's Info
-            </h2>
-            <!--Text Area-->
-            <ul id="ownerInformation">
-              <label for="fn2" class="ui-hidden-accessible">
-                First Name:
-              </label>
-              <input name="user" id="fn2" value="" placeholder="First Name" data-theme="a" type="text">
-              <label for="ln2" class="ui-hidden-accessible">
-                Last Name:
-              </label>
-              <input name="user" id="ln2" value="" placeholder="Last Name" data-theme="a" type="text">
-              <label for="email2" class="ui-hidden-accessible">
-                Email:
-              </label>
-              <input name="em" id="em2" value="" placeholder="Email Example: JohnDoe@123.com" data-theme="a" type="text">
-              <label for="pNumber" class="ui-hidden-accessible">
-                Phone Number:
-              </label>
-              <input name="number" id="phone" value="" placeholder="Phone Number Example: 123-456-7890" data-theme="a" type="number">
-              <label for="onotes">
-              </label>
-              <textarea name="onotes" id="onotes" placeholder="Notes: Example: Owner always likes bows." data-theme="a" type="text">
-              </textarea>
-              
-            </ul>
-            
+          <a href="#owners" data-role="button" data-icon="arrow-r" data-iconpos="right">
+            Owner Name
+          </a>
+          
+          <a href="#pets" data-role="button" data-icon="arrow-r" data-iconpos="right">
+            Pet Picture
+          </a>
+          
+          <a href="#breedInfo" data-role="button" data-icon="arrow-r" data-iconpos="right">
+            Breeds
+          </a>
+          
+          <a href="#calendar" data-role="button" data-icon="arrow-r" data-iconpos="right">
+            Schedule
+          </a>
+          
+          <a href="#groomingInfo" data-role="button" data-icon="arrow-r" data-iconpos="right">
+            Style
+          </a>
+          
+        </div>
+        
+        
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+            <a href="#popupLogin" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">
+              Sign in
+            </a>
+            <div data-role="popup" id="popupLogin" data-theme="a" class="ui-content">
+              <form method="get" action="">
+                <div>
+                  <h3>
+                    Please sign in
+                  </h3>
+                  <label for="email">
+                    Email:
+                  </label>
+                  <input id="email" name="email" type="email" title="Please enter your email address" placeholder="JaneSmith@email.com" required />
+                  
+                  <label for="password">
+                    Password:
+                  </label>
+                  <input id="password" name="password" type="password" title="Please enter a password, it must contain at least 1 lowercase and 1 uppercase character and be at least 6 characters in length" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" placeholder="******" required />
+                  
+                  <button type="submit" data-theme="a" data-icon="check">
+                    Sign in
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
+          <div class="ui-block-b">
+            <a href="#popupRegister" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="gear" data-theme="a" data-transition="pop">
+              Register
+            </a>
+            <div data-role="popup" id="popupRegister" data-theme="a" class="ui-content">
+              <form name="signup-form">
+                <label for="firstname">
+                  Firstname:
+                </label>
+                <input id="firstname" name="firstname" type="text" title="Please enter your firstname" placeholder="John" autofocus required />
+                
+                <label for="surname">
+                  Surname:
+                </label>
+                <input id="surname" name="surname" type="text" title="Please enter your surname" placeholder="Smith" required />
+                
+                <label for="email">
+                  Email:
+                </label>
+                <input id="email" name="email" type="email" title="Please enter your email address" placeholder="JohnSmith@email.com" required />
+                
+                <label for="website">
+                  Website:
+                </label>
+                <input id="website" name="website" type="url" title="Please enter the url to your website (optional)" placeholder="http://schnittger.me" />
+                
+                <label for="password">
+                  Password:
+                </label>
+                <input id="password" name="password" type="password" title="Please enter a password, it must contain at least 1 lowercase and 1 uppercase character and be at least 6 characters in length" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" placeholder="******" required />
+                
+                <label for="checkbox">
+                  Remember me?:
+                </label>
+                <input id="checkbox" name="checkbox" type="checkbox" checked />
+                <!--Don't need this here just using as an example-->
+                <label for="checkbox">
+                  Are you a...?:
+                </label>
+                <select id="options" name="options">
+                  <option value="opt-1">
+                    Groomer
+                  </option>
+                  <option value="opt-2">
+                    Owner
+                  </option>
+                  <option value="opt-3">
+                    Just Browsing
+                  </option>
+                  <option value="opt-4">
+                    Troll
+                  </option>
+                </select>
+                
+                
+                <input type="submit" value="Signup!" />
+                
+              </form>
+              
+              
+            </div>
+          </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a href="#home"class="ui-btn-active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#companyInfo">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="#addItem">
+              Add a Pet
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /navbar -->
+    </div>
+    <!-- /footer -->
+    </div>
+    
+    <!--This is where the form results should go-->
+    <div data-role="page" id="addItem" data-add-back-btn="true" data-theme="a" data-content-theme="a">
+      <div data-role="header" data-position="fixed" data-theme="a" data-add-back-btn="true">
+        <h2>
+          Add Your Pet
+        </h2>
+      </div>
+      <!-- /header -->
+      
+      <div data-role="content">
+        <!--Form-->
+        <b>
+          Submit or clear all fields
+        </b>
+        <nav>
+          <a href = "#" id="clear">
+            Clear Stored Data 
+          </br>
+        </a>
+        <a href = "#displayPage" id="display">
+          Show Data 
+        </a>
+        <br>
+        <a href = "#" id="addNew">
+          Add New Item
+        </a>
+      </nav>
+    <ul id="errors">
+    </ul>
+    <span>
+      * fields are required.
+    </span>
+    <form action="#"method="post" id="petForm">
+      <fieldset id="ownerFieldSet">
+        
+        <div data-role="fieldcontain">
+          <h2>
+            Owner's Info
+          </h2>
+          <!--Text Area-->
+          <ul id="ownerInformation">
+            <label for="fn2" class="ui-hidden-accessible">
+              First Name:
+            </label>
+            <input name="user" id="fn2" value="" placeholder="First Name" data-theme="a" type="text">
+            <label for="ln2" class="ui-hidden-accessible">
+              Last Name:
+            </label>
+            <input name="user" id="ln2" value="" placeholder="Last Name" data-theme="a" type="text">
+            <label for="email2" class="ui-hidden-accessible">
+              Email:
+            </label>
+            <input name="em" id="em2" value="" placeholder="Email Example: JohnDoe@123.com" data-theme="a" type="text">
+            <label for="pNumber" class="ui-hidden-accessible">
+              Phone Number:
+            </label>
+            <input name="number" id="phone" value="" placeholder="Phone Number Example: 123-456-7890" data-theme="a" type="number">
+            <label for="onotes">
+            </label>
+            <textarea name="onotes" id="onotes" placeholder="Notes: Example: Owner always likes bows." data-theme="a" type="text">
+            </textarea>
+            
+          </ul>
           
-        </fieldset>
-
+        </div>
+        
+      </fieldset>
+      
       <fieldset id="petFieldSet">
         
         <div data-role="fieldcontain">
@@ -243,334 +269,340 @@ HTMLDoc-->
             
           </ul>
         </div>
-      </fieldset>
-      
-      
-      <fieldset>
-        <label for="breed">
-          What is the pet's breed?
-        </label>
-        <select id="breed">
-          <optgroup label="Dogs">
-            <option value="small">
-              small dog
-            </option>
-            <option value="medium">
-              medium dog
-            </option>
-            <option value="large">
-              large dog
-            </option>
-          </optgroup>
-          <optgroup label="Cats">
-            <option value="Domestic Short Hair">
-              domestic short-haired
-            </option>
-            <option value="Domestic Long Hair">
-              domestic long-haired
-            </option>
-          </optgroup>
-        </select>
+        </fieldset>
         
-      </fieldset>
-      
-      <!--Radio Button-->
-      
-      
-      <fieldset data-role="controlgroup">
-        <div>
-          <p>
-            What is the pet's sex?
-          </p>
-          <br />
-          <input name="radio-choice-v-2" id="male" value="off" checked="checked" type="radio">
-          <label for="radio-choice-v-2a">
-            Male
-          </label>
-          <input name="radio-choice-v-2" id="female" value="off" type="radio">
-          <label for="radio-choice-v-2b">
-            Female
-          </label>
-          <input name="radio-choice-v-2" id="neutered" value="other" type="radio">
-          <label for="radio-choice-v-2c">
-            Neutered
-          </label>
-          <input name="radio-choice-v-2" id="spayed" value="other" type="radio">
-          <label for="radio-choice-v-2d">
-            Spayed
-          </label>
-          <input name="radio-choice-v-2" id="unknown" value="on" type="radio">
-          <label for="radio-choice-v-2e">
-            Unknown
-          </label>
-        </div>
-      </fieldset>
-      
-      <h2>
-        Grooming Info
-      </h2>
-      <div data-role="fieldcontain">
         
-        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="gdate">
-          <p>
-            What was the groom date?
-          </p>
+        <fieldset>
+          <label for="breed">
+            What is the pet's breed?
+          </label>
+          <select id="breed">
+            <optgroup label="Dogs">
+              <option value="small">
+                small dog
+              </option>
+              <option value="medium">
+                medium dog
+              </option>
+              <option value="large">
+                large dog
+              </option>
+            </optgroup>
+            <optgroup label="Cats">
+              <option value="Domestic Short Hair">
+                domestic short-haired
+              </option>
+              <option value="Domestic Long Hair">
+                domestic long-haired
+              </option>
+            </optgroup>
+          </select>
           
-          <label for="select-choice-month">
-            Month
-          </label>
-          <select name="select-choice-month" id="select-choice-month">
-            <option>
+        </fieldset>
+        
+        <!--Radio Button-->
+        
+        
+        <fieldset data-role="controlgroup">
+          <div>
+            <p>
+              What is the pet's sex?
+            </p>
+            <br />
+            <input name="radio-choice-v-2" id="male" value="off" checked="checked" type="radio">
+            <label for="radio-choice-v-2a">
+              Male
+            </label>
+            <input name="radio-choice-v-2" id="female" value="off" type="radio">
+            <label for="radio-choice-v-2b">
+              Female
+            </label>
+            <input name="radio-choice-v-2" id="neutered" value="other" type="radio">
+            <label for="radio-choice-v-2c">
+              Neutered
+            </label>
+            <input name="radio-choice-v-2" id="spayed" value="other" type="radio">
+            <label for="radio-choice-v-2d">
+              Spayed
+            </label>
+            <input name="radio-choice-v-2" id="unknown" value="on" type="radio">
+            <label for="radio-choice-v-2e">
+              Unknown
+            </label>
+          </div>
+        </fieldset>
+        
+        <h2>
+          Grooming Info
+        </h2>
+        <div data-role="fieldcontain">
+          
+          <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="gdate">
+            <p>
+              What was the groom date?
+            </p>
+            
+            <label for="select-choice-month">
               Month
-          </option>
-          <option value="jan">
-            January
-          </option>
-          <option value="feb">
-            February
-          </option>
-          <option value="mar">
-            March
-          </option>
-          <option value="apr">
-            April
-          </option>
-          <option value="may">
-            May
-          </option>
-          <option value="jun">
-            June
-          </option>
-          <option value="jul">
-            July
-          </option>
-          <option value="aug">
-            August
-          </option>
-          <option value="sep">
-            September
-          </option>
-          <option value="oct">
-            October
-          </option>
-          <option value="nov">
-            November
-          </option>
-          <option value="dec">
-            December
-          </option>
-      </select>
-      
-      <label for="select-choice-day">
-        Day
-      </label>
-      <select name="select-choice-day" id="select-choice-day">
-        <option>
-          Day
-        </option>
-        <option value="1">
-          1
-        </option>
-        <option value="2">
-          2
-        </option>
-        <option value="3">
-          3
-        </option>
-        <option value="4">
-          4
-        </option>
-        <option value="5">
-          5
-        </option>
-        <option value="6">
-          6
-        </option>
-        <option value="7">
-          7
-        </option>
-        <option value="8">
-          8
-        </option>
-        <option value="9">
-          9
-        </option>
-        <option value="10">
-          10
-        </option>
-        <option value="11">
-          11
-        </option>
-        <option value="12">
-          12
-        </option>
-        <option value="13">
-          13
-        </option>
-        <option value="14">
-          14
-        </option>
-        <option value="15">
-          15
-        </option>
-        <option value="16">
-          16
-        </option>
-        <option value="17">
-          17
-        </option>
-        <option value="18">
-          18
-        </option>
-        <option value="19">
-          19
-        </option>
-        <option value="20">
-          20
-        </option>
-        <option value="21">
-          21
-        </option>
-        <option value="22">
-          22
-        </option>
-        <option value="23">
-          23
-        </option>
-        <option value="24">
-          24
-        </option>
-        <option value="25">
-          25
-        </option>
-        <option value="26">
-          26
-        </option>
-        <option value="27">
-          27
-        </option>
-        <option value="28">
-          28
-        </option>
-        <option value="29">
-          29
-        </option>
-        <option value="30">
-          30
-        </option>
-        <option value="31">
-          31
-        </option>
-      </select>
-      
-      <label for="select-choice-year">
-        Year
-      </label>
-      <select name="select-choice-year" id="select-choice-year">
-        <option>
-          Year
-        </option>
-        <option value="2011">
-          2007
-        </option>
-        <option value="2011">
-          2008
-        </option>
-        <option value="2011">
-          2009
-        </option>
-        <option value="2011">
-          2010
-        </option>
-        <option value="2011">
-          2011
-        </option>
-        <option value="2011">
-          2012
-        </option>
-        <option value="2011">
-          2013
-        </option>
-        <option value="2011">
-          2014
-        </option>
-        <option value="2011">
-          2015
-        </option>
-        <option value="2011">
-          2016
-        </option>
-        <option value="2011">
-          2017
-        </option>
-      </select>
-      
-      </fieldset>
-      </div>
-      <fieldset>
-        <h4>
-          Difficulty
-        </h4>
-        <!--Range -->
-        <p>
-          On a scale from 1 to 10, how difficult was the groom? 5 being average.
-        </p>
-        <input type="range" name="slider" min="1" max="10" value="5" id="slider">
-        <input type="hidden" value="true" />
-        
-        <label for="pnotes">
-        </label>
-        <textarea name="pnotes" id="pnotes" placeholder="Notes: Example: Oatmeal bath, extra brushing" data-theme="a" type="text">
-        </textarea>
-        
-      </fieldset>
-      <div>
-        
-        <input type="submit" value="Submit" id="store" />
-        <br />
-        
-      </div>
-      </form>
-  </div>
-  <!-- /content -->
-  
-  <div data-role="footer" data-position="fixed" data-theme="a">
-    <div data-role="navbar">
-      <ul>
-        <li>
-          <a href="Home">
-            Home
-          </a>
-        </li>
-        <li>
+            </label>
+            <select name="select-choice-month" id="select-choice-month">
+              <option>
+                Month
+              </option>
+              <option value="jan">
+                January
+              </option>
+              <option value="feb">
+                February
+              </option>
+              <option value="mar">
+                March
+              </option>
+              <option value="apr">
+                April
+              </option>
+              <option value="may">
+                May
+              </option>
+              <option value="jun">
+                June
+              </option>
+              <option value="jul">
+                July
+              </option>
+              <option value="aug">
+                August
+              </option>
+              <option value="sep">
+                September
+              </option>
+              <option value="oct">
+                October
+              </option>
+              <option value="nov">
+                November
+              </option>
+              <option value="dec">
+                December
+              </option>
+            </select>
+            
+            <label for="select-choice-day">
+              Day
+            </label>
+            <select name="select-choice-day" id="select-choice-day">
+              <option>
+                Day
+              </option>
+              <option value="1">
+                1
+              </option>
+              <option value="2">
+                2
+              </option>
+              <option value="3">
+                3
+              </option>
+              <option value="4">
+                4
+              </option>
+              <option value="5">
+                5
+              </option>
+              <option value="6">
+                6
+              </option>
+              <option value="7">
+                7
+              </option>
+              <option value="8">
+                8
+              </option>
+              <option value="9">
+                9
+              </option>
+              <option value="10">
+                10
+              </option>
+              <option value="11">
+                11
+              </option>
+              <option value="12">
+                12
+              </option>
+              <option value="13">
+                13
+              </option>
+              <option value="14">
+                14
+              </option>
+              <option value="15">
+                15
+              </option>
+              <option value="16">
+                16
+              </option>
+              <option value="17">
+                17
+              </option>
+              <option value="18">
+                18
+              </option>
+              <option value="19">
+                19
+              </option>
+              <option value="20">
+                20
+              </option>
+              <option value="21">
+                21
+              </option>
+              <option value="22">
+                22
+              </option>
+              <option value="23">
+                23
+              </option>
+              <option value="24">
+                24
+              </option>
+              <option value="25">
+                25
+              </option>
+              <option value="26">
+                26
+              </option>
+              <option value="27">
+                27
+              </option>
+              <option value="28">
+                28
+              </option>
+              <option value="29">
+                29
+              </option>
+              <option value="30">
+                30
+              </option>
+              <option value="31">
+                31
+              </option>
+            </select>
+            
+            <label for="select-choice-year">
+              Year
+            </label>
+            <select name="select-choice-year" id="select-choice-year">
+              <option>
+                Year
+              </option>
+              <option value="2011">
+                2007
+              </option>
+              <option value="2011">
+                2008
+              </option>
+              <option value="2011">
+                2009
+              </option>
+              <option value="2011">
+                2010
+              </option>
+              <option value="2011">
+                2011
+              </option>
+              <option value="2011">
+                2012
+              </option>
+              <option value="2011">
+                2013
+              </option>
+              <option value="2011">
+                2014
+              </option>
+              <option value="2011">
+                2015
+              </option>
+              <option value="2011">
+                2016
+              </option>
+              <option value="2011">
+                2017
+              </option>
+            </select>
+            
+          </fieldset>
+        </div>
+        <fieldset>
+          <h4>
+            Difficulty
+          </h4>
+          <!--Range -->
+          <p>
+            On a scale from 1 to 10, how difficult was the groom? 5 being average.
+          </p>
+          <input type="range" name="slider" min="1" max="10" value="5" id="slider">
+          <input type="hidden" value="true" />
           
-          <a href="#companyInfo">
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Clear Fields
-          </a>
-        </li>
-      </ul>
+          <label for="pnotes">
+          </label>
+          <textarea name="pnotes" id="pnotes" placeholder="Notes: Example: Oatmeal bath, extra brushing" data-theme="a" type="text">
+          </textarea>
+          
+        </fieldset>
+        <div>
+          
+          <input type="submit" value="Submit" id="store" />
+          <br />
+          
+        </div>
+    </form>
     </div>
-  </div>
-  <!-- /footer -->
+    <!-- /content -->
+    
+    <div data-role="footer" data-position="fixed" data-theme="a">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a href="Home">
+              Home
+            </a>
+          </li>
+          <li>
+            
+            <a href="#companyInfo">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Clear Fields
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /footer -->
   </div>
   <!-- /page -->
   <!--Display Page-->
   <div data-role="page" id="displayPage" data-theme="a" data-content-theme="a">
     <div data-role="header" data-position="fixed" data-add-back-btn="true"data-theme="a">
-    
-    </div><!--header-->
+      
+    </div>
+    <!--header-->
     <div data-role="content" data-theme="a" data-content-theme="a">
-   
       
-        <a href="index.html" data-role="button" data-inline="true">JSON Data</a>
-		<a href="index.html" data-role="button" data-inline="true">AJAX Data</a>
       
-    </div><!--content-->
+      <a href="index.html" data-role="button" data-inline="true">
+        JSON Data
+      </a>
+      <a href="index.html" data-role="button" data-inline="true">
+        AJAX Data
+      </a>
+      
+    </div>
+    <!--content-->
     <div data-role="footer" data-position="fixed" data-theme="a">
       <div data-role="navbar">
         <ul>
@@ -590,10 +622,13 @@ HTMLDoc-->
             </a>
           </li>
         </ul>
-      </div><!--navbar -->
-    </div><!-- Footer-->
-  </div><!--Page-->
-    
+      </div>
+      <!--navbar -->
+    </div>
+    <!-- Footer-->
+  </div>
+  <!--Page-->
+  
   
   <!--Company Info Page-->
   <div data-role="page" id="companyInfo" data-add-back-btn="true" data-theme="a" data-content-theme="a">
@@ -1214,8 +1249,7 @@ Faces
   <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js">
   </script>
   <!--
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 -->
   <script src="JS/main.js">
   </script>

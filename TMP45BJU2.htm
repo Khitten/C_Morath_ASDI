@@ -94,7 +94,7 @@ header, section, footer, aside, nav, article, figure
             
           </div>
           
-          <div data-role="fieldcontain">
+          
             <div class="ui-grid-a">
               <div class="ui-block-a">
                 <a href="#popupLogin" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-icon="check" data-theme="a" data-transition="pop">
@@ -106,20 +106,12 @@ header, section, footer, aside, nav, article, figure
                         <h3>
                           Please sign in
                         </h3>
-                        <label for="un" class="ui-hidden-accessible">
-                          Username:
-                        </label>
-                        <input name="user" id="un" value="" placeholder="username" data-theme="a" type="text">
-                        <p>
-                          *Required
-                        </p>
-                        <label for="pw" class="ui-hidden-accessible">
-                          Password:
-                        </label>
-                        <input name="pass" id="pw" value="" placeholder="password" data-theme="a" type="password">
-                        <p>
-                          *Required. Password is case sensitive.
-                        </p>
+                        <label for="email">Email:</label>
+   						<input id="email" name="email" type="email" title="Please enter your email address" placeholder="JaneSmith@email.com" required />
+    
+                        <label for="password">Password:</label>
+    					<input id="password" name="password" type="password" title="Please enter a password, it must contain at least 1 lowercase and 1 uppercase character and be at least 6 characters in length" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" placeholder="******" required />
+    
                         <button type="submit" data-theme="a" data-icon="check">
                           Sign in
                         </button>
@@ -132,56 +124,48 @@ header, section, footer, aside, nav, article, figure
                    Register
                  </a>
                  <div data-role="popup" id="popupRegister" data-theme="a" class="ui-content">
-                   <form>
-                     <div>
-                       <h3>
-                         Please Register
-                       </h3>
-                       <label for="fn1" class="ui-hidden-accessible">
-                         First Name:
-                       </label>
-                       <input name="user" id="fn1" value="" placeholder="First Name" data-theme="a" type="text">
-                       <label for="ln1" class="ui-hidden-accessible">
-                         Last Name:
-                       </label>
-                       <input name="user1" id="ln1" value="" placeholder="Last Name" data-theme="a" type="text">
-                       <label for="email" class="ui-hidden-accessible">
-                         Email:
-                       </label>
-                       <input name="em" id="em" value="" placeholder="Email" data-theme="a" type="text">
-                       <p>
-                         *Required. Example: JohnDoe@123.com
-                       </p>
-                       <label for="un" class="ui-hidden-accessible">
-                         Username:
-                       </label>
-                       <input name="user1" id="user1" value="" placeholder="Username" data-theme="a" type="text">
-                       <p>
-                         *Required.
-                       </p>
-                       <label for="pw" class="ui-hidden-accessible">
-                         Password:
-                       </label>
-                       <input name="pass1" id="pass1" value="" placeholder="Password" data-theme="a" type="password">
-                       <p>
-                         *Required. Password is case sensitive.
-                       </p>
-                       <button type="submit" data-theme="a" data-icon="check">
-                         Register
-                       </button>
-                     </div>
-                   </form>
-                 </div>
-               </div>
-           </div>
+                  <form name="signup-form">
+    <label for="firstname">Firstname:</label>
+    <input id="firstname" name="firstname" type="text" title="Please enter your firstname" placeholder="John" autofocus required />
+    
+    <label for="surname">Surname:</label>
+    <input id="surname" name="surname" type="text" title="Please enter your surname" placeholder="Smith" required />
+    
+    <label for="email">Email:</label>
+    <input id="email" name="email" type="email" title="Please enter your email address" placeholder="JohnSmith@email.com" required />
+    
+    <label for="website">Website:</label>
+    <input id="website" name="website" type="url" title="Please enter the url to your website (optional)" placeholder="http://schnittger.me" />
+    
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="password" title="Please enter a password, it must contain at least 1 lowercase and 1 uppercase character and be at least 6 characters in length" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" placeholder="******" required />
+    
+    <label for="checkbox">Remember me?:</label>
+    <input id="checkbox" name="checkbox" type="checkbox" checked />
+    <!--Don't need this here just using as an example-->
+    <label for="checkbox">Are you a...?:</label>
+    <select id="options" name="options">
+        <option value="opt-1">Groomer</option>
+        <option value="opt-2">Owner</option>
+        <option value="opt-3">Just Browsing</option>
+        <option value="opt-4">Troll</option>
+    </select>
+    
+    
+    <input type="submit" value="Signup!" />
+
+</form>
+        
            
           </div>
+      </div>
+      </div>
       </div>
       <div data-role="footer" data-position="fixed" data-theme="b">
         <div data-role="navbar">
           <ul>
             <li>
-              <a href="#Home"class="ui-btn-active">
+              <a href="#home"class="ui-btn-active">
                 Home
               </a>
             </li>
@@ -224,6 +208,7 @@ header, section, footer, aside, nav, article, figure
       <a href = "#displayPage" id="display">
         Show Data 
       </a>
+      <br>
       <a href = "#" id="addNew">
         Add New Item
       </a>
@@ -268,12 +253,7 @@ header, section, footer, aside, nav, article, figure
           </div>
           
         </fieldset>
-		
-      
-      
-      
-      
-      
+
       <fieldset id="petFieldSet">
         
         <div data-role="fieldcontain">
@@ -610,6 +590,41 @@ header, section, footer, aside, nav, article, figure
   <!-- /footer -->
   </div>
   <!-- /page -->
+  <!--Display Page-->
+  <div data-role="page" id="displayPage" data-theme="a" data-content-theme="a">
+    <div data-role="header" data-position="fixed" data-add-back-btn="true"data-theme="a">
+    
+    </div><!--header-->
+    <div data-role="content" data-theme="a" data-content-theme="a">
+   
+      
+        <a href="index.html" data-role="button" data-inline="true">JSON Data</a>
+		<a href="index.html" data-role="button" data-inline="true">AJAX Data</a>
+      
+    </div><!--content-->
+    <div data-role="footer" data-position="fixed" data-theme="a">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a href="#home">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#companyInfo">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="#addItem">
+              Add a Pet
+            </a>
+          </li>
+        </ul>
+      </div><!--navbar -->
+    </div><!-- Footer-->
+  </div><!--Page-->
+    
   
   <!--Company Info Page-->
   <div data-role="page" id="companyInfo" data-add-back-btn="true" data-theme="a" data-content-theme="a">

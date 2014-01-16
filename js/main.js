@@ -6,6 +6,7 @@
 // http://www.developerdrive.com/2013/08/jquery-plugin-for-caching-forms-using-html5-local-storage/
 
 	//Waits for the page to initialize after JQM enhances the page.
+	/*global $,jQuery,localStorage,alert,var5*/
 $('#home').on('pageinit', function () {
 	//Saves orm to local storage using JQuery and JSON
 	//Starts the JQuery plug in wrapper, used to maintain chainability
@@ -18,7 +19,7 @@ $('#home').on('pageinit', function () {
                 var key = input.parents('form:first').attr('name');
                 var data = JSON.parse(localStorage[key]);
 				
-                if (input.attr('type') == 'radio' || input.attr('type') == 'checkbox') {
+                if (input.attr('type') === 'radio' || input.attr('type') === 'checkbox') {
                     data[input.attr('name')] = input.is(':checked');
                 } else {
                     data[input.attr('name')] = input.val();
@@ -49,10 +50,10 @@ $('#home').on('pageinit', function () {
                     element.find('input, select').change(on_change);
 
                     element.find('input, select').each(function () {
-                        if ($(this).attr('type') != 'submit') {
+                        if ($(this).attr('type') !== 'submit') {
                             var input = $(this);
                             var value = data[input.attr('name')];
-                            if (input.attr('type') == 'radio' || input.attr('type') == 'checkbox') {
+                            if (input.attr('type') === 'radio' || input.attr('type') === 'checkbox') {
                                 if (value) {
                                     input.attr('checked', input.is(':checked'));
                                 } else {

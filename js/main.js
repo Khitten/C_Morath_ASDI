@@ -15,23 +15,27 @@ $('#home').on('pageinit', function () {
             var settings = $.extend({}, options);
 			//Changes the data object back into a string
             function on_change(event) {
-                var input = $(event.target);
-                var key = input.parents('form:first').attr('name');
-                var data = JSON.parse(localStorage[key]);
+				var input = $(event.target);
+				var key = input.parents('form:first').attr('name');
+				alert(key)
+				if(key==="signup-form"){
+					var data = JSON.parse(localStorage[key]);
 				
-                if (input.attr('type') === 'radio' || input.attr('type') === 'checkbox') {
-                    data[input.attr('name')] = input.is(':checked');
-                } else {
-                    data[input.attr('name')] = input.val();
-                }
+                	if (input.attr('type') === 'radio' || input.attr('type') === 'checkbox') {
+                   	 data[input.attr('name')] = input.is(':checked');
+                	} else {
+                    	data[input.attr('name')] = input.val();
+               	 	}
 
-                localStorage[key] = JSON.stringify(data);
-            }
+                	localStorage[key] = JSON.stringify(data);
+            	}
+			}
 
             return this.each(function () {
                 var element = $(this);
 				//makes sure the broswer allows use of local storage
                 if (typeof (Storage) !== "undefined") {
+					
 					
 					//uses the name attribute to create a key, can also use ID instead
                     var key = element.attr('name');
@@ -91,6 +95,7 @@ $('#addItem').on('pageinit', function () {
         if ($("#phone").val().length === 0) {
             returnValue = false;
         }
+		
         if (returnValue === true) {
             //serialize and save data
             var id = Math.floor(Math.random() * 100000000001);

@@ -134,6 +134,9 @@ $('#addItem').on('pageinit', function () {
     });
 });
 
+
+
+
 //any other code needed for addItem page goes here
 
 

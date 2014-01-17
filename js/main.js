@@ -17,7 +17,7 @@ $('#home').on('pageinit', function () {
             function on_change(event) {
 				var input = $(event.target);
 				var key = input.parents('form:first').attr('name');
-				alert(key)
+				
 				if(key==="signup-form"){
 					var data = JSON.parse(localStorage[key]);
 				
@@ -94,14 +94,42 @@ $('#addItem').on('pageinit', function () {
         var returnValue = true;
         if ($("#phone").val().length === 0) {
             returnValue = false;
+			$("#phone").css({'background-color' : '#FF3333'});
         }
+		if ($("#fn2").val().length === 0) {
+            returnValue = false;
+			$("#fn2").css({'background-color' : '#FF3333'});
+        }
+		if ($("#ln2").val().length === 0) {
+            returnValue = false;
+			$("#ln2").css({'background-color' : '#FF3333'});
+        }
+		
 		
         if (returnValue === true) {
             //serialize and save data
             var id = Math.floor(Math.random() * 100000000001);
-            localStorage.setItem(id, $(this).serializeArray());
+			//getSelectedRadio();
+		var item = {};
+		
+			item.fn2 = ["Owner's First Name:", $("#fn2").val()];
+			item.ln2 = ["Owner's Last Name:", $("#ln2").val()];
+			/*item.onotes = ["Owner's Notes:", $("onotes").value];
+			item.pname = ["Pet's Name:", $("pname").value];
+			item.breed = ["Breed:", $("breed").value];
+			item.gdate = ["Groom Date:", $("gdate").value];
+			item.slider = ["Difficulty:", $("slider").value];
+			item.gnotes = ["Grooming Notes:", $("gnotes").value];
+			item.pnotes = ["Pet Notes:", $("pnotes").value];
+			item.sex = ["Sex:", sexValue];*/
+			//Save data into local storage: use Stringify to convert object to a string. 
+			
+		localStorage.setItem(id, JSON.stringify(item));
+            //localStorage.setItem(id, $(this).serializeArray());
             alert("Pet saved!");
-        }
+        }else{
+			alert("Please enter required fields");
+		}
         return returnValue;
     });
 });

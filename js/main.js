@@ -83,13 +83,13 @@ $('#home').on('pageinit', function () {
 });
 $('#addItem').on('pageinit', function () {
     //click events for display, save and clear
-    var displayLink = $('#popupDisplay');
+    var displayLink = $('#display');
     displayLink.on('click', getData);
     var save = $('#save');
     save.on('click', validate);
     var clear = $('#clear');
     clear.on('click', clearLocal);
-	//var id = "my-form-data";
+	
     $("#petForm").submit(function (event) {
         var returnValue = true;
         if ($("#phone").val().length === 0) {
@@ -108,6 +108,7 @@ $('#addItem').on('pageinit', function () {
 		
         if (returnValue === true) {
             //serialize and save data
+			var id = Math.floor(Math.random() * 100000000001);
             
 			//getSelectedRadio();
 		var item = {};
@@ -126,29 +127,12 @@ $('#addItem').on('pageinit', function () {
 			//Save data into local storage: use Stringify to convert object to a string. 
 			
 		localStorage.setItem(id, JSON.stringify(item));
-            //localStorage.setItem(id, $(this).serializeArray());
             alert("Pet saved!");
-			//$.mobile.changePage("#add"); to $.mobile.changePage("#displayPage");
         }else{
 			alert("Please enter required fields");
 		}
         return returnValue;
-		
-		/*$("#displayPage").on("pageshow", function() {
-        var data = localStorage.getItem("my-form-data");
-        ("#form-data").text(data);
-    });*/
     });
-	
-	/*$('#displayPage').on('pageinit', function () {
-		$('#myBtn').click(function(e){ 
-	var fName = window.localStorage['$fn2'];
-	var lName = window.localStorage['birthday'];
-	var phone = window.localStorage[''];
-
-
-});*/
-$('#result').html("<br />$('form').serialize():<br />"+ $('form').serialize()+"<br /><br />$('form').serializeArray():<br />" + JSON.stringify($('form').serializeArray()));
 
 });
 
@@ -161,6 +145,7 @@ var autofillData = function () {
 };
 
 var getData = function () {
+	$('#result').html(formatData());
 
 };
 
@@ -180,14 +165,20 @@ var clearLocal = function () {
 var validate = function () {
 
 };
-
-//form validate
-/*	var myForm = $('#formId');
-		    myForm.validate({
-			invalidHandler: function(form, validator) {
-			},
-			submitHandler: function() {
-		var data = myForm.serializeArray();
-			storeData(data);
+	
+	function formatData()
+	{
+	var result="";	
+	
+	//Write data from local storage
+		
+		for(var i=0, len=localStorage.length; i<len; i++){
+			
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			//convert the string from local storage value back to an oblect by using JSON.parse()
+			var obj = JSON.parse(value); 
+			result=result+key+value;
 		}
-	}); */
+		return result;
+}

@@ -89,7 +89,7 @@ $('#addItem').on('pageinit', function () {
     save.on('click', validate);
     var clear = $('#clear');
     clear.on('click', clearLocal);
-
+	//var id = "my-form-data";
     $("#petForm").submit(function (event) {
         var returnValue = true;
         if ($("#phone").val().length === 0) {
@@ -108,7 +108,7 @@ $('#addItem').on('pageinit', function () {
 		
         if (returnValue === true) {
             //serialize and save data
-            var id = Math.floor(Math.random() * 100000000001);
+            
 			//getSelectedRadio();
 		var item = {};
 		
@@ -122,22 +122,35 @@ $('#addItem').on('pageinit', function () {
 			item.gnotes = ["Grooming Notes:", $("gnotes").value];
 			item.pnotes = ["Pet Notes:", $("pnotes").value];
 			item.sex = ["Sex:", sexValue];*/
+			
 			//Save data into local storage: use Stringify to convert object to a string. 
 			
 		localStorage.setItem(id, JSON.stringify(item));
             //localStorage.setItem(id, $(this).serializeArray());
             alert("Pet saved!");
+			//$.mobile.changePage("#add"); to $.mobile.changePage("#displayPage");
         }else{
 			alert("Please enter required fields");
 		}
         return returnValue;
+		
+		/*$("#displayPage").on("pageshow", function() {
+        var data = localStorage.getItem("my-form-data");
+        ("#form-data").text(data);
+    });*/
     });
+	
+	/*$('#displayPage').on('pageinit', function () {
+		$('#myBtn').click(function(e){ 
+	var fName = window.localStorage['$fn2'];
+	var lName = window.localStorage['birthday'];
+	var phone = window.localStorage[''];
+
+
+});*/
+$('#result').html("<br />$('form').serialize():<br />"+ $('form').serialize()+"<br /><br />$('form').serializeArray():<br />" + JSON.stringify($('form').serializeArray()));
+
 });
-
-
-
-
-//any other code needed for addItem page goes here
 
 
 

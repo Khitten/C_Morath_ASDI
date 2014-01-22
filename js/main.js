@@ -80,8 +80,8 @@ $('#home').on('pageinit', function () {
     $('form').FormCache();
 	
 
-
-//$('#addItem').on('pageinit', function () {
+});
+$('#addItem').on('pageinit', function () {
     //click events for display, save and clear
     var displayLink = $('#display');
     displayLink.on('click', getData);
@@ -182,4 +182,3 @@ var validate = function () {
 		}
 		return result;
 	}
-});
